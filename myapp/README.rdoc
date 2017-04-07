@@ -24,8 +24,3 @@ Create an alternate sign up path for a premium account
 
 Wiki versioning with Papertrail (github.com/airblade/paper_trail)
 
-To Do
-
-Remove private column from wikis table
-
-Implement responsive design
