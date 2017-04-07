@@ -2,25 +2,23 @@ blocipedia
 
 An app that lets users view and create wikis.
 
-There are three types of users: standard, premium and admin.
+- There are three types of users: standard, premium and admin.
 
-Users may upgrade their account to a premium account via a Stripe subscription. Premium users may also downgrade their account to a standard one.
+- Users may upgrade their account to a premium account via a Stripe subscription. Premium users may also downgrade their account to a standard one.
 
-Users with premium accounts may mark a wiki as private so that it will only be viewable by them or an admin.
+- Users with premium accounts may mark a wiki as private so that it will only be viewable by them or an admin.
 
-Features to implement
+- Collaborators
 
-Collaborators
+- Allow premium users to add and remove collaborators to and from their private wiki via user email
 
-Allow premium users to add and remove collaborators to and from their private wiki via user email
+- Create a 'Pending Invites' table for users who are invited to collaborate on a wiki but don't have an account already, and record the id of the wiki they were invited to
 
-Create a 'Pending Invites' table for users who are invited to collaborate on a wiki but don't have an account already, and record the id of the wiki they were invited to
+- Create a mailer that will send an invite link to an invited user.
 
-Create a mailer that will send an invite link to an invited user.
+- If an invited user signs up, check the 'Pending Invites' table for that user's email and make them a collaborator for that wiki and then delete the user from the pending invites table.
 
-If an invited user signs up, check the 'Pending Invites' table for that user's email and make them a collaborator for that wiki and then delete the user from the pending invites table.
+- Create an alternate sign up path for a premium account
 
-Create an alternate sign up path for a premium account
 
-Wiki versioning with Papertrail (github.com/airblade/paper_trail)
 
