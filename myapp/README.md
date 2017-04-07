@@ -1,24 +1,31 @@
-# README
+blocipedia
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+An app that lets users view and create wikis.
 
-Things you may want to cover:
+There are three types of users: standard, premium and admin.
 
-* Ruby version
+Users may upgrade their account to a premium account via a Stripe subscription. Premium users may also downgrade their account to a standard one.
 
-* System dependencies
+Users with premium accounts may mark a wiki as private so that it will only be viewable by them or an admin.
 
-* Configuration
+Features to implement
 
-* Database creation
+Collaborators
 
-* Database initialization
+Allow premium users to add and remove collaborators to and from their private wiki via user email
 
-* How to run the test suite
+Create a 'Pending Invites' table for users who are invited to collaborate on a wiki but don't have an account already, and record the id of the wiki they were invited to
 
-* Services (job queues, cache servers, search engines, etc.)
+Create a mailer that will send an invite link to an invited user.
 
-* Deployment instructions
+If an invited user signs up, check the 'Pending Invites' table for that user's email and make them a collaborator for that wiki and then delete the user from the pending invites table.
 
-* ...
+Create an alternate sign up path for a premium account
+
+Wiki versioning with Papertrail (github.com/airblade/paper_trail)
+
+To Do
+
+Remove private column from wikis table
+
+Implement responsive design
